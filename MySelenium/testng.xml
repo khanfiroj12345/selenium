@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" preserve-order="true">
+	<listeners>
+		<listener
+			class-name="atu.testng.reports.listeners.ATUReportsListener">
+		</listener>
+		<listener
+			class-name="atu.testng.reports.listeners.ConfigurationListener">
+		</listener>
+		<listener
+			class-name="atu.testng.reports.listeners.MethodListener">
+		</listener>
+	</listeners>
+	<test name="Test1">
+		<classes>
+			<class name="testClasses.Login"></class>
+
+
+		</classes>
+	</test>
+	<test name="Test2">
+		<classes>
+			<class name="testClasses.Search"></class>
+		</classes>
+	</test>
+	<test name="Test3">
+		<classes>
+			<class name="testClasses.SocialLogin" />
+		</classes>
+	</test><!-- Test -->
+</suite><!-- Suite -->

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="atu.testng.reports.listeners.ATUReportsListener"/>
+    <listener class-name="atu.testng.reports.listeners.ConfigurationListener"/>
+    <listener class-name="atu.testng.reports.listeners.MethodListener"/>
+  </listeners>
+  <test name="Test1(failed)">
+    <classes>
+      <class name="testClasses.Login">
+        <methods>
+          <include name="login" invocation-numbers="1"/>
+          <include name="afterTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testClasses.Login -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test name="Test2(failed)">
+    <classes>
+      <class name="testClasses.Search">
+        <methods>
+          <include name="searchTest" invocation-numbers="0 1 2 3"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- testClasses.Search -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test name="Test3(failed)">
+    <classes>
+      <class name="testClasses.SocialLogin">
+        <methods>
+          <include name="facebookLogin" invocation-numbers="0 1"/>
+          <include name="cleanUp"/>
+          <include name="setup"/>
+          <include name="linkdinLogin" invocation-numbers="0 1"/>
+          <include name="twitterLogin" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- testClasses.SocialLogin -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+</suite> <!-- Failed suite [Suite] -->
